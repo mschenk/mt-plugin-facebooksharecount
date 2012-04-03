@@ -1,0 +1,7 @@
+<mtapp:setting
+  id="count_fb_shares"
+  label="Count Facebook Shares of the entries in this blog?"
+  hint="This will cause calls to be made to the Facebook API every hour, one for each entry in this blog.  On larger blogs this could slow down the server."
+  show_hint="1">
+    <input type="checkbox" name="count_fb_shares" id="count_fb_shares" value="1" <mt:if name="count_fb_shares">checked="1"</mt:if>/>
+</mtapp:setting>
