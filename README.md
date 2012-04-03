@@ -1,6 +1,6 @@
 FacebookShareCount for Movable Type
 ====================================
-This is a plugin for the Movable Type CMS (http://www.movabletype.org).  It pulls in the number of Facebook likes/shares for each of a blog's entries periodically, and makes this data available for display and/or sorting, both in the backend and on the frontent of the blog.
+This is a plugin for the Movable Type CMS (http://www.movabletype.org).  It pulls in the number of Facebook likes/shares for all entries in a blog periodically, and makes this data available for display and/or sorting, both in the backend and on the frontent of the blog.
 
 Compatibility
 -------------
@@ -24,9 +24,11 @@ Usage
 * The plugin adds a tag <mt:EntryFBShares> to any entry context in MT's templates, which will display the current number of Facebook shares at the time the template was published.
 * The plugin adds a 'fbshares' field to the standard MT::Entry object, allowing entries lists to be sorted by this number in this way:
 
+
     <mt:entries lastn="99999" sort_by="fbshares" sort_order="desc">
     <li><mt:EntryFBShares> - <a href="<mt:entrypermalink>"><mt:entrytitle></a></li>
     </mt:entries>
+    
 
 Credits
 -------
