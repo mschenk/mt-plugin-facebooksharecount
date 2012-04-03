@@ -20,15 +20,15 @@ Go to the Tools > Plugins menu of the blog you want to enable this plugin for, a
 
 Usage
 ------
-* In Movable Type 5, go to the screen listing a blog's entries and click on the 'Display Options'.  There should now be an option to add a 'Facebook Shares' column to the listing.  NOTE: the data is refreshed hourly, so right after plugin installation the column might still be blank.  Also, if none of your posts are shared on Facebook, the column will remain blank as well.
+* In Movable Type 5, go to the screen listing a blog's entries and click on the 'Display Options'.  There should now be an option to add a 'Facebook Shares' column to the listing.  __NOTE__: the data is refreshed hourly, so right after plugin installation the column might still be blank.  Also, if none of your posts are shared on Facebook, the column will remain blank as well.
 * The plugin adds a tag <mt:EntryFBShares> to any entry context in MT's templates, which will display the current number of Facebook shares at the time the template was published.
 * The plugin adds a 'fbshares' field to the standard MT::Entry object, allowing entries lists to be sorted by this number in this way:
 
-
+```
     <mt:entries lastn="99999" sort_by="fbshares" sort_order="desc">
     <li><mt:EntryFBShares> - <a href="<mt:entrypermalink>"><mt:entrytitle></a></li>
     </mt:entries>
-    
+```
 
 Credits
 -------
