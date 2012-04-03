@@ -1,0 +1,33 @@
+id: FacebookShareCount
+name: FacebookShareCount
+version: 1.0
+description: A plugin which pulls in the number of shares for each of your entries
+author_name: Maarten Schenk
+author_link: http://www.yesitcan.be
+doc_link: http://www.yesitcan.be
+schema_version: 1
+
+object_types:
+    entry:
+        fbshares: integer
+        
+settings:
+  count_fb_shares:
+    default: 0
+    scope: blog
+    
+list_properties:
+    entry:
+      fbshares: Facebook Shares
+    
+blog_config_template: blog_config.tmpl
+
+tasks:
+  count_fb_shares:
+    label:     "Count Facebook Shares"
+    frequency: 3600
+    code:      $FacebookShareCount::FacebookShareCount::Plugin::count_facebook_shares
+    
+tags:
+  function:
+    EntryFBShares:  $FacebookShareCount::FacebookShareCount::Plugin::_hdlr_entryfbshares
